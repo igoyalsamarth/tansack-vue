@@ -150,7 +150,7 @@ const visiblePages = computed(() => {
 
 <template>
     <div class="w-full">
-        <table class="w-full table-auto border-collapse">
+        <table class="w-full table-auto border-collapse bg-white">
             <thead class="border border-[#F4F4F5]">
                 <tr v-for="headerGroup in table.getHeaderGroups()" :key="headerGroup.id">
                     <td :class="{
@@ -159,8 +159,8 @@ const visiblePages = computed(() => {
                         'pr-6 pl-2': header.id === 'actions',
                         'px-2': header.id !== 'uid' && header.id !== 'actions'
                     }" v-for="header in headerGroup.headers" :key="header.id" :colspan="header.colSpan">
-                        <div class="flex flex-col gap-2 font-medium" :class="{
-                            ' justify-start items-start pb-9': header.id === 'approval' || header.id === 'amount'
+                        <div class="flex flex-col gap-2 font-medium whitespace-nowrap" :class="{
+                            'pb-9': header.id === 'approval' || header.id === 'amount'
                         }">
                             <FlexRender v-if="!header.isPlaceholder" :render="header.column.columnDef.header"
                                 :props="header.getContext()" />

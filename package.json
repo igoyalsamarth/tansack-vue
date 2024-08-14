@@ -19,6 +19,7 @@
     "ant-design-vue": "^4.2.3",
     "dayjs": "^1.11.12",
     "nuxt": "^3.12.4",
+    "unplugin-vue-components": "^0.27.4",
     "vue": "latest"
   },
   "devDependencies": {

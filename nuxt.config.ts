@@ -10,6 +10,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  plugins: ['@/plugins/fontawesome.js']
+  plugins: ['@/plugins/fontawesome.js','@/plugins/antd.ts']
 
 })

@@ -5,6 +5,6 @@
 @tailwind utilities;
 
 
-html{
+html, body{
     font-family: 'Satoshi', sans-serif;
 }
