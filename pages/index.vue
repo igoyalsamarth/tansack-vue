@@ -43,8 +43,8 @@ export default {
 </template>
 
 <style scoped>
-:deep(.ant-tabs-tab){
-    padding: 8px, 4px
+:deep(.ant-tabs-tab) {
+    padding: 8px 4px;
 }
 
 :deep(.ant-tabs-nav-wrap) {
