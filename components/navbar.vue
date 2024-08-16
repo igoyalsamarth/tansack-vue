@@ -23,10 +23,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <a-menu mode="horizontal" class="w-full px-6 flex items-center" :selected-keys="selectedKeys">
+  <a-menu mode="horizontal" class="w-full px-6 flex items-center text-[#71717A] font-medium" :selected-keys="selectedKeys">
     <a-menu-item :disabled="true" class="border hover:cursor-default border-[#00336B]">
       <span class="text-[#00336B] text-sm font-medium">ERP4</span>
-      <span class="text-[#6A6E05] text-sm">Impact</span>
+      <span class="text-[#6A6E05] text-sm font-normal">Impact</span>
     </a-menu-item>
     <a-menu-item class="py-2" key="dashboard">
       <nuxt-link to="/">Dashboard</nuxt-link>

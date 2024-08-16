@@ -19,9 +19,9 @@ export default {
     <div class="flex flex-col">
         <div class="flex justify-between border-b border-[#F4F4F5] bg-[#FAFAFA] px-4 py-3 items-center">
             <p class="text-[#52525B] text-lg font-bold">Expenses</p>
-            <a-button class="rounded font-medium" type="primary">Add New Expense</a-button>
+            <a-button class="rounded text-sm font-medium" type="primary">Add New Expense</a-button>
         </div>
-        <a-tabs class="w-full bg-[#FAFAFA]" v-model:activeKey="activeKey">
+        <a-tabs class="w-full bg-[#FAFAFA] text-[#71717A]" v-model:activeKey="activeKey">
             <a-tab-pane key="1" tab="Submitted By Me">Content of Tab Pane 1</a-tab-pane>
             <a-tab-pane key="2" tab="Pending Approval from me" force-render>Content of Tab Pane 2</a-tab-pane>
             <a-tab-pane key="3" tab="Default">Content of Tab Pane 3</a-tab-pane>
@@ -58,4 +58,10 @@ export default {
     padding: 8px 12px;
     height: auto;
 }
+:deep(.ant-tabs-tab-btn){
+    font-weight: 500;
+}; 
+:deep(.ant-tabs-tab-btn):hover {
+        color: #0000 !important;
+    }
 </style>
