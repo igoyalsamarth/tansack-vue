@@ -34,5 +34,5 @@ onBeforeUnmount(() => clearTimeout(timeout.value))
 </script>
 
 <template>
-  <input class="px-2 py-1 w-[70px] rounded gap-2 border border-[#E4E4E7] text-xs text-[#D4D4D8] shadow-none font-medium" v-model="localValue" v-bind="$attrs" />
+  <input class="px-2 py-1 w-full rounded gap-2 border border-[#E4E4E7] text-xs text-[#D4D4D8] shadow-none font-medium" v-model="localValue" v-bind="$attrs" />
 </template>

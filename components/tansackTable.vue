@@ -45,7 +45,7 @@ const columns = [
     }),
     columnHelper.accessor('amount', {
         header: 'Amount(INR)',
-        cell: (value)  => formatToIndianCurrency(value.getValue()),
+        cell: (value) => formatToIndianCurrency(value.getValue()),
     }),
     columnHelper.accessor('approval', {
         header: 'Approval',
@@ -188,9 +188,10 @@ const visiblePages = computed(() => {
                 <tr class="border border-[#F4F4F5] font-medium text-sm text-[#52525B]"
                     v-for="row in table.getRowModel().rows" :key="row.id">
                     <td class="py-4 pl-6 pr-2">
-                        <FlexRender v-if="row.getVisibleCells()[0].getValue() !== null" :render="row.getVisibleCells()[0].column.columnDef.cell"
+                        <FlexRender v-if="row.getVisibleCells()[0].getValue() !== null"
+                            :render="row.getVisibleCells()[0].column.columnDef.cell"
                             :props="row.getVisibleCells()[0].getContext()" />
-                            <p v-else>-</p>
+                        <p v-else>-</p>
                     </td>
                     <td class="py-4 px-2">
                         <FlexRender :render="row.getVisibleCells()[1].column.columnDef.cell"
@@ -225,24 +226,24 @@ const visiblePages = computed(() => {
                     <td class="py-4 px-2" :class="{
                         'text-[#15803D] font-bold': row.getVisibleCells()[8].getValue() === 'all',
                         'text-[#A1A1AA]': row.getVisibleCells()[8].getValue() === 'no' || row.getVisibleCells()[8].getValue() === 'pending',
-                    }" >
+                    }">
                         <FlexRender :render="row.getVisibleCells()[8].column.columnDef.cell"
                             :props="row.getVisibleCells()[8].getContext()" />
                     </td>
                     <td class="py-4 px-2" :class="{
                         'text-[#15803D]': row.getVisibleCells()[9].getValue() === 'paid',
                         'text-[#854D0E]': row.getVisibleCells()[9].getValue() === 'partial'
-                                            }" >
+                    }">
                         <FlexRender :render="row.getVisibleCells()[9].column.columnDef.cell"
                             :props="row.getVisibleCells()[9].getContext()" />
                     </td>
                     <td class="py-4 px-2" :class="{
                         'text-[#15803D]': row.getVisibleCells()[10].getValue() === true,
-                    }" >
+                    }">
                         <FlexRender :render="row.getVisibleCells()[10].column.columnDef.cell"
                             :props="row.getVisibleCells()[10].getContext()" />
                     </td>
-                    <td class="py-4 px-2">
+                    <td class="py-4 pr-6 pl-2">
                         <FlexRender :render="row.getVisibleCells()[11].column.columnDef.cell"
                             :props="row.getVisibleCells()[11].getContext()" />
                     </td>
