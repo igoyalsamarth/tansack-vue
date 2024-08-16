@@ -3,13 +3,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
   css: ['~/assets/css/main.css'],
-  ssr:false,
+  ssr: false,
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {},
-    },
+      autoprefixer: {}
+    }
   },
-  plugins: ['@/plugins/fontawesome.js','@/plugins/antd.ts']
-
-})
+  plugins: ['@/plugins/fontawesome.js', '@/plugins/antd.ts']
+});
