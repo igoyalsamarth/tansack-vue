@@ -17,7 +17,7 @@ export default {
 
 <template>
     <div class="flex flex-col">
-        <div class="flex justify-between border-b border-[#F4F4F5] bg-[#FAFAFA] px-4 py-6 items-center">
+        <div class="flex justify-between border-b border-[#F4F4F5] bg-[#FAFAFA] px-4 py-3 items-center">
             <p class="text-[#52525B] text-lg font-bold">Expenses</p>
             <a-button class="rounded font-medium" type="primary">Add New Expense</a-button>
         </div>
@@ -53,5 +53,9 @@ export default {
 
 :deep(.ant-tabs-nav) {
     margin-bottom: 0px;
+}
+:deep(.ant-btn-primary) {
+    padding: 8px 12px;
+    height: auto;
 }
 </style>

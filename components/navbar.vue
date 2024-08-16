@@ -10,54 +10,58 @@ export default defineComponent({
     "a-menu-item": Menu.Item,
   },
   setup() {
+
+    const route = useRoute();
+    const selectedKeys = computed(() => [route.path === '/' ? 'dashboard' : route.path.slice(1)]);
+
     const handleLogout = () => {
       console.log("logout!");
     };
-    return { handleLogout };
+    return { handleLogout, selectedKeys };
   },
 });
 </script>
 
 <template>
-  <a-menu mode="horizontal" class="w-full py-6 px-4">
-    <a-menu-item class="border border-[#00336B] inline-block my-3 px-2">
-      <span class="text-[#00336B]">ERP4</span>
-      <span class="text-[#6A6E05]">Impact</span>
+  <a-menu mode="horizontal" class="w-full px-6 flex items-center" :selected-keys="selectedKeys">
+    <a-menu-item :disabled="true" class="border hover:cursor-default border-[#00336B]">
+      <span class="text-[#00336B] text-sm font-medium">ERP4</span>
+      <span class="text-[#6A6E05] text-sm">Impact</span>
     </a-menu-item>
-    <a-menu-item key="dashboard">
+    <a-menu-item class="py-2" key="dashboard">
       <nuxt-link to="/">Dashboard</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="expenses">
+    <a-menu-item class="py-2" key="expenses">
       <nuxt-link to="/expenses">Expenses</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="advances">
+    <a-menu-item class="py-2"  key="advances">
       <nuxt-link to="/advances">Advances</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="donors">
+    <a-menu-item class="py-2"  key="donors">
       <nuxt-link to="/donors">Donors</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="donations">
+    <a-menu-item class="py-2" key="donations">
       <nuxt-link to="/donations">Donations</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="grants">
+    <a-menu-item class="py-2"  key="grants">
       <nuxt-link to="/grants">Grants</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="pledges">
+    <a-menu-item class="py-2"  key="pledges">
       <nuxt-link to="/pledges">Pledges</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="budgets">
+    <a-menu-item class="py-2"  key="budgets">
       <nuxt-link to="/budgets">Budgets</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="utilities" class="utilities">
+    <a-menu-item key="utilities" class="utilities py-2">
       <nuxt-link to="/utilities">Utilities</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="setup"
+    <a-menu-item class="py-2"  key="setup"
       ><nuxt-link to="/setup">Setup</nuxt-link></a-menu-item
     >
-    <a-menu-item key="admin">
+    <a-menu-item class="py-2"  key="admin">
       <nuxt-link to="/admin">Admin</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="Support">
+    <a-menu-item class="py-2" key="Support">
       <nuxt-link to="/support" class="flex items-center justify-between">
         <svg
           width="24"
@@ -78,7 +82,7 @@ export default defineComponent({
         <span>Support</span>
       </nuxt-link>
     </a-menu-item>
-    <a-menu-item @click="handleLogout">Logout</a-menu-item>
+    <a-menu-item class="py-2"@click="handleLogout">Logout</a-menu-item>
   </a-menu>
 </template>
 
