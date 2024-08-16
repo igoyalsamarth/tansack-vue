@@ -19,7 +19,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <a-menu mode="horizontal" class="py-6 px-4">
+  <a-menu mode="horizontal" class="w-full py-6 px-4">
     <a-menu-item class="border border-[#00336B] inline-block my-3 px-2">
       <span class="text-[#00336B]">ERP4</span>
       <span class="text-[#6A6E05]">Impact</span>
@@ -48,7 +48,7 @@ export default defineComponent({
     <a-menu-item key="budgets">
       <nuxt-link to="/budgets">Budgets</nuxt-link>
     </a-menu-item>
-    <a-menu-item key="utilities">
+    <a-menu-item key="utilities" class="utilities">
       <nuxt-link to="/utilities">Utilities</nuxt-link>
     </a-menu-item>
     <a-menu-item key="setup"
@@ -81,3 +81,9 @@ export default defineComponent({
     <a-menu-item @click="handleLogout">Logout</a-menu-item>
   </a-menu>
 </template>
+
+<style>
+.utilities {
+  margin-left: auto !important;
+}
+</style>
